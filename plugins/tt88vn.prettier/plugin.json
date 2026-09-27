@@ -1,0 +1,251 @@
+{
+  "id": "tt88vn.prettier",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": {
+    "vi": "Prettier (JsPrettier)",
+    "en": "Prettier (JsPrettier)"
+  },
+  "description": {
+    "vi": "Định dạng code bằng Prettier 3 chạy ngay trong SubT: JS/TS/JSX, CSS/SCSS/LESS, HTML, JSON, Markdown, YAML, GraphQL. Đọc .prettierrc, định dạng vùng chọn, định dạng khi lưu.",
+    "en": "Format code with Prettier 3 running inside SubT: JS/TS/JSX, CSS/SCSS/LESS, HTML, JSON, Markdown, YAML, GraphQL. Reads .prettierrc, formats selections, format on save."
+  },
+  "author": "tt88vn",
+  "license": "MIT AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND BlueOak-1.0.0",
+  "main": "main.js",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:css",
+    "onLanguage:scss",
+    "onLanguage:less",
+    "onLanguage:json",
+    "onLanguage:jsonc",
+    "onLanguage:html",
+    "onLanguage:markdown",
+    "onLanguage:yaml",
+    "onLanguage:graphql"
+  ],
+  "permissions": [
+    "workspace.read"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "prettier.format",
+        "title": {
+          "vi": "Định dạng tệp",
+          "en": "Format File"
+        },
+        "category": "Prettier"
+      },
+      {
+        "id": "prettier.formatSelection",
+        "title": {
+          "vi": "Định dạng vùng chọn",
+          "en": "Format Selection"
+        },
+        "category": "Prettier"
+      },
+      {
+        "id": "prettier.toggleFormatOnSave",
+        "title": {
+          "vi": "Bật/tắt định dạng khi lưu",
+          "en": "Toggle Format on Save"
+        },
+        "category": "Prettier"
+      },
+      {
+        "id": "prettier.showConfig",
+        "title": {
+          "vi": "Xem cấu hình đang dùng",
+          "en": "Show Effective Configuration"
+        },
+        "category": "Prettier"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "prettier.format",
+        "key": "ctrl+shift+i"
+      }
+    ],
+    "settings": [
+      {
+        "key": "formatOnSave",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Định dạng khi lưu (lệnh \"Bật/tắt định dạng khi lưu\" ghi đè cài đặt này)",
+          "en": "Format on save (the \"Toggle Format on Save\" command overrides this)"
+        }
+      },
+      {
+        "key": "useConfigFile",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "Dùng .prettierrc / .prettierrc.json / .prettierrc.yaml / package.json \"prettier\" gần nhất trong thư mục đang mở (ưu tiên hơn cài đặt dưới đây)",
+          "en": "Use the nearest .prettierrc / .prettierrc.json / .prettierrc.yaml / package.json \"prettier\" in the open folder (wins over the settings below)"
+        }
+      },
+      {
+        "key": "maxFileSize",
+        "type": "number",
+        "default": 50000,
+        "description": {
+          "vi": "Không định dạng tệp lớn hơn số ký tự này (giới hạn CPU 3 giây của plugin)",
+          "en": "Skip files larger than this many characters (plugins get 3 s of CPU per call)"
+        }
+      },
+      {
+        "key": "maxSizeOnSave",
+        "type": "number",
+        "default": 30000,
+        "description": {
+          "vi": "Giới hạn kích thước khi định dạng lúc lưu",
+          "en": "Size limit for format on save"
+        }
+      },
+      {
+        "key": "printWidth",
+        "type": "number",
+        "default": 80,
+        "description": {
+          "vi": "Độ dài dòng tối đa",
+          "en": "Line length to wrap at"
+        }
+      },
+      {
+        "key": "tabWidth",
+        "type": "number",
+        "default": 0,
+        "description": {
+          "vi": "Số dấu cách mỗi mức thụt lề (0 = theo SubT)",
+          "en": "Spaces per indent level (0 = follow SubT)"
+        }
+      },
+      {
+        "key": "useTabs",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Thụt lề bằng tab",
+          "en": "Indent with tabs"
+        }
+      },
+      {
+        "key": "semi",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "Dấu ; cuối câu lệnh",
+          "en": "Semicolons at the end of statements"
+        }
+      },
+      {
+        "key": "singleQuote",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Dùng nháy đơn",
+          "en": "Use single quotes"
+        }
+      },
+      {
+        "key": "jsxSingleQuote",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Nháy đơn trong JSX",
+          "en": "Single quotes in JSX"
+        }
+      },
+      {
+        "key": "quoteProps",
+        "type": "string",
+        "default": "as-needed",
+        "description": {
+          "vi": "Nháy quanh tên thuộc tính: as-needed | consistent | preserve",
+          "en": "Quotes around object keys: as-needed | consistent | preserve"
+        }
+      },
+      {
+        "key": "trailingComma",
+        "type": "string",
+        "default": "all",
+        "description": {
+          "vi": "Dấu phẩy cuối: all | es5 | none",
+          "en": "Trailing commas: all | es5 | none"
+        }
+      },
+      {
+        "key": "bracketSpacing",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "Khoảng trắng trong { a }",
+          "en": "Spaces inside { a }"
+        }
+      },
+      {
+        "key": "bracketSameLine",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Đặt > của thẻ nhiều dòng ở cuối dòng cuối",
+          "en": "Put the > of a multi-line tag at the end of the last line"
+        }
+      },
+      {
+        "key": "arrowParens",
+        "type": "string",
+        "default": "always",
+        "description": {
+          "vi": "Ngoặc quanh tham số arrow function: always | avoid",
+          "en": "Arrow function parentheses: always | avoid"
+        }
+      },
+      {
+        "key": "proseWrap",
+        "type": "string",
+        "default": "preserve",
+        "description": {
+          "vi": "Xuống dòng văn bản Markdown: always | never | preserve",
+          "en": "Markdown prose wrapping: always | never | preserve"
+        }
+      },
+      {
+        "key": "htmlWhitespaceSensitivity",
+        "type": "string",
+        "default": "css",
+        "description": {
+          "vi": "Khoảng trắng HTML: css | strict | ignore",
+          "en": "HTML whitespace: css | strict | ignore"
+        }
+      },
+      {
+        "key": "singleAttributePerLine",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Mỗi thuộc tính HTML/JSX một dòng",
+          "en": "One HTML/JSX attribute per line"
+        }
+      },
+      {
+        "key": "objectWrap",
+        "type": "string",
+        "default": "preserve",
+        "description": {
+          "vi": "Giữ object nhiều dòng: preserve | collapse",
+          "en": "Object wrapping: preserve | collapse"
+        }
+      }
+    ]
+  }
+}

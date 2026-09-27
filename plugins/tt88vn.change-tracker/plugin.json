@@ -1,0 +1,160 @@
+{
+  "id": "tt88vn.change-tracker",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": {
+    "vi": "Change Tracker (GitGutter rút gọn)",
+    "en": "Change Tracker (GitGutter lite)"
+  },
+  "description": {
+    "vi": "Theo dõi thay đổi so với lần lưu cuối (hoặc lúc mở): xem diff, nhảy tới thay đổi tiếp theo, hoàn tác từng đoạn, so sánh với tệp khác hoặc clipboard.",
+    "en": "Track changes since the last save (or since opening): view the diff, jump between changes, revert a single change, compare with another file or the clipboard."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "main": "main.js",
+  "activationEvents": [
+    "onStartup"
+  ],
+  "permissions": [
+    "workspace.read",
+    "clipboard"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "changes.diff",
+        "title": {
+          "vi": "Xem diff (so với mốc)",
+          "en": "Show Diff (against baseline)"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      },
+      {
+        "id": "changes.next",
+        "title": {
+          "vi": "Tới thay đổi tiếp theo",
+          "en": "Go to Next Change"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      },
+      {
+        "id": "changes.previous",
+        "title": {
+          "vi": "Tới thay đổi trước",
+          "en": "Go to Previous Change"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      },
+      {
+        "id": "changes.list",
+        "title": {
+          "vi": "Danh sách thay đổi",
+          "en": "List Changes"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      },
+      {
+        "id": "changes.revert",
+        "title": {
+          "vi": "Hoàn tác đoạn thay đổi tại con trỏ",
+          "en": "Revert Change at Caret"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      },
+      {
+        "id": "changes.setBaseline",
+        "title": {
+          "vi": "Đặt mốc so sánh = nội dung hiện tại",
+          "en": "Set Baseline to Current Text"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      },
+      {
+        "id": "changes.diffWithFile",
+        "title": {
+          "vi": "So sánh với tệp khác trong thư mục…",
+          "en": "Compare with Another File…"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      },
+      {
+        "id": "changes.diffWithClipboard",
+        "title": {
+          "vi": "So sánh với clipboard",
+          "en": "Compare with Clipboard"
+        },
+        "category": {
+          "vi": "Thay đổi",
+          "en": "Changes"
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "changes.next",
+        "key": "ctrl+alt+."
+      },
+      {
+        "command": "changes.previous",
+        "key": "ctrl+alt+,"
+      },
+      {
+        "command": "changes.diff",
+        "key": "ctrl+alt+d"
+      }
+    ],
+    "settings": [
+      {
+        "key": "compareWith",
+        "type": "string",
+        "default": "save",
+        "description": {
+          "vi": "Mốc so sánh: \"save\" = lần lưu cuối, \"open\" = lúc mở tệp",
+          "en": "Baseline: \"save\" = last save, \"open\" = when the file was opened"
+        }
+      },
+      {
+        "key": "showSummary",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "Hiện \"+3 −1 · 2 đoạn thay đổi\" trên thanh trạng thái khi ngừng gõ",
+          "en": "Show \"+3 −1 · 2 change(s)\" in the status bar when you stop typing"
+        }
+      },
+      {
+        "key": "contextLines",
+        "type": "number",
+        "default": 3,
+        "description": {
+          "vi": "Số dòng ngữ cảnh trong diff",
+          "en": "Context lines in the diff"
+        }
+      }
+    ]
+  }
+}
