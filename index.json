@@ -3,6 +3,70 @@
   "registry": "tt88vn/subt-plugins",
   "plugins": [
     {
+      "id": "tt88vn.bracket-tools",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "Công cụ ngoặc (BracketHighlighter)",
+        "en": "Bracket Tools (BracketHighlighter)"
+      },
+      "description": {
+        "vi": "Nhảy tới ngoặc tương ứng, mở rộng vùng chọn theo ngoặc/nháy, xóa/đổi/bọc ngoặc, tìm ngoặc không khớp. Bỏ qua ngoặc trong chuỗi và comment.",
+        "en": "Jump to the matching bracket, expand the selection by brackets/quotes, remove/change/wrap pairs, find unmatched brackets. Ignores strings and comments."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [],
+      "hasCode": true,
+      "contributes": {
+        "commands": 7,
+        "keybindings": 3
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.bracket-tools",
+      "tag": "tt88vn.bracket-tools-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.bracket-tools-v1.0.0/tt88vn.bracket-tools-1.0.0.subt-plugin",
+        "sha256": "7174fb3b815fd2771c6c9671fcd33170354d6e067065aa324194c565b8538dc9",
+        "size": 5811
+      }
+    },
+    {
+      "id": "tt88vn.change-tracker",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "Change Tracker (GitGutter rút gọn)",
+        "en": "Change Tracker (GitGutter lite)"
+      },
+      "description": {
+        "vi": "Theo dõi thay đổi so với lần lưu cuối (hoặc lúc mở): xem diff, nhảy tới thay đổi tiếp theo, hoàn tác từng đoạn, so sánh với tệp khác hoặc clipboard.",
+        "en": "Track changes since the last save (or since opening): view the diff, jump between changes, revert a single change, compare with another file or the clipboard."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [
+        "workspace.read",
+        "clipboard"
+      ],
+      "hasCode": true,
+      "contributes": {
+        "commands": 8,
+        "keybindings": 3,
+        "settings": 3
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.change-tracker",
+      "tag": "tt88vn.change-tracker-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.change-tracker-v1.0.0/tt88vn.change-tracker-1.0.0.subt-plugin",
+        "sha256": "d6f9ea401f0ce8be4924426469a27a5859ad1eca1b58be583f3fc9d25de97fc1",
+        "size": 6963
+      }
+    },
+    {
       "id": "tt88vn.dracula",
       "version": "1.0.0",
       "displayName": "Dracula",
@@ -26,6 +90,164 @@
         "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.dracula-v1.0.0/tt88vn.dracula-1.0.0.subt-plugin",
         "sha256": "c4eb341f76a1a9c6cffb5db18fa0843a82187cedd9af5ec46ada5b5b67abfe51",
         "size": 1323
+      }
+    },
+    {
+      "id": "tt88vn.emmet",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "Emmet",
+        "en": "Emmet"
+      },
+      "description": {
+        "vi": "Viết tắt Emmet cho HTML/CSS/JSX (ul>li*3, m10-20, !), bọc vùng chọn bằng viết tắt, chọn/xóa/đổi tên thẻ.",
+        "en": "Emmet abbreviations for HTML/CSS/JSX (ul>li*3, m10-20, !), wrap with abbreviation, balance/remove/rename tags."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [],
+      "hasCode": true,
+      "contributes": {
+        "commands": 6,
+        "keybindings": 4,
+        "settings": 1
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.emmet",
+      "tag": "tt88vn.emmet-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.emmet-v1.0.0/tt88vn.emmet-1.0.0.subt-plugin",
+        "sha256": "76758721d72dca93bea13db422883e39ccd720f5c96b5cb5c3771128fd557b36",
+        "size": 16436
+      }
+    },
+    {
+      "id": "tt88vn.json-tools",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "Pretty JSON mở rộng",
+        "en": "Pretty JSON Extras"
+      },
+      "description": {
+        "vi": "Bổ sung cho Pretty JSON có sẵn: JSON ↔ YAML/XML/CSV/JSON Lines, truy vấn JSONPath, xem đường dẫn tại con trỏ, làm sạch JSONC, định dạng gọn mảng ngắn.",
+        "en": "Extras for the built-in Pretty JSON: JSON → YAML/XML/CSV/JSON Lines and back, JSONPath queries, path at caret, JSONC cleanup, compact formatting."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [],
+      "hasCode": true,
+      "contributes": {
+        "commands": 10,
+        "keybindings": 2,
+        "settings": 4
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.json-tools",
+      "tag": "tt88vn.json-tools-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.json-tools-v1.0.0/tt88vn.json-tools-1.0.0.subt-plugin",
+        "sha256": "c217ecd019624da3cbab22c471642536cce227a9f9e4cccebeab536d1af7be42",
+        "size": 8748
+      }
+    },
+    {
+      "id": "tt88vn.linter",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "Linter (SublimeLinter rút gọn)",
+        "en": "Linter (SublimeLinter lite)"
+      },
+      "description": {
+        "vi": "Kiểm tra khi lưu: lỗi cú pháp JSON/JavaScript, ngoặc không khớp, khoảng trắng thừa, thụt lề lẫn tab/dấu cách, dấu xung đột merge… Danh sách lỗi và F8 để nhảy tới lỗi tiếp theo.",
+        "en": "Checks on save: JSON/JavaScript syntax errors, unmatched brackets, trailing whitespace, mixed indentation, merge conflict markers… Problem list, F8 to jump to the next one."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [],
+      "hasCode": true,
+      "contributes": {
+        "commands": 5,
+        "keybindings": 3,
+        "settings": 6
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.linter",
+      "tag": "tt88vn.linter-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.linter-v1.0.0/tt88vn.linter-1.0.0.subt-plugin",
+        "sha256": "4586af391f8a947dbaf8f5e659f6bab1d6552a412b4db7a7225a9d9d65bc620f",
+        "size": 11074
+      }
+    },
+    {
+      "id": "tt88vn.markdown-editing",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "MarkdownEditing",
+        "en": "MarkdownEditing"
+      },
+      "description": {
+        "vi": "Soạn Markdown nhanh: bật/tắt in đậm/nghiêng/code, tiêu đề, danh sách & việc cần làm, căn bảng, mục lục tự cập nhật, tới tiêu đề, snippet.",
+        "en": "Faster Markdown: toggle bold/italic/code, headings, lists & tasks, table formatting, auto-updating table of contents, go to heading, snippets."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [],
+      "hasCode": true,
+      "contributes": {
+        "commands": 22,
+        "keybindings": 9,
+        "snippets": 1,
+        "settings": 6
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.markdown-editing",
+      "tag": "tt88vn.markdown-editing-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.markdown-editing-v1.0.0/tt88vn.markdown-editing-1.0.0.subt-plugin",
+        "sha256": "6348678194e6851515917239fc49b2d4e25ada772083927b53f5fe6e7456cd36",
+        "size": 12467
+      }
+    },
+    {
+      "id": "tt88vn.prettier",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "Prettier (JsPrettier)",
+        "en": "Prettier (JsPrettier)"
+      },
+      "description": {
+        "vi": "Định dạng code bằng Prettier 3 chạy ngay trong SubT: JS/TS/JSX, CSS/SCSS/LESS, HTML, JSON, Markdown, YAML, GraphQL. Đọc .prettierrc, định dạng vùng chọn, định dạng khi lưu.",
+        "en": "Format code with Prettier 3 running inside SubT: JS/TS/JSX, CSS/SCSS/LESS, HTML, JSON, Markdown, YAML, GraphQL. Reads .prettierrc, formats selections, format on save."
+      },
+      "author": "tt88vn",
+      "license": "MIT AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND BlueOak-1.0.0",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [
+        "workspace.read"
+      ],
+      "hasCode": true,
+      "contributes": {
+        "commands": 4,
+        "keybindings": 1,
+        "settings": 19
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.prettier",
+      "tag": "tt88vn.prettier-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.prettier-v1.0.0/tt88vn.prettier-1.0.0.subt-plugin",
+        "sha256": "0fee50115db22217f0324eba514baf8db22333fc15c55e50c45ba7c31ae9f035",
+        "size": 918817
       }
     },
     {
