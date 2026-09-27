@@ -1,0 +1,62 @@
+name: Publish registry
+
+# On main: pack every plugin, create a GitHub Release per new plugin version
+# (tag "<id>-v<version>" with the .subt-plugin file) and update index.json, which SubT reads.
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'plugins/**'
+      - 'scripts/**'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: publish-registry
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate and pack
+        run: node scripts/registry.mjs build dist
+
+      - name: Create releases for new plugin versions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          jq -c '.plugins[]' dist/index.json | while read -r p; do
+            tag=$(echo "$p" | jq -r .tag)
+            file="dist/$(echo "$p" | jq -r '.download.url' | sed 's#.*/##')"
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "✓ $tag already released"
+              continue
+            fi
+            title="$(echo "$p" | jq -r '.id') $(echo "$p" | jq -r '.version')"
+            notes="$(echo "$p" | jq -r 'if (.description|type)=="object" then (.description.en // .description.vi) else .description end')
+          sha256: $(echo "$p" | jq -r .download.sha256)"
+            gh release create "$tag" "$file" --title "$title" --notes "$notes" --target "$GITHUB_SHA"
+            echo "↑ released $tag"
+          done
+
+      - name: Commit index.json
+        run: |
+          cp dist/index.json index.json
+          if git diff --quiet -- index.json && git ls-files --error-unmatch index.json >/dev/null 2>&1; then
+            echo "index.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "Update index.json [skip ci]"
+          git push
