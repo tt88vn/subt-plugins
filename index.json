@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "registry": "tt88vn/subt-plugins",
+  "plugins": [
+    {
+      "id": "tt88vn.dracula",
+      "version": "1.0.0",
+      "displayName": "Dracula",
+      "description": {
+        "vi": "Bảng màu tối Dracula (bảng màu gốc của draculatheme.com, MIT).",
+        "en": "The Dracula dark color scheme (palette from draculatheme.com, MIT)."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [],
+      "hasCode": false,
+      "contributes": {
+        "themes": 1
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.dracula",
+      "tag": "tt88vn.dracula-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.dracula-v1.0.0/tt88vn.dracula-1.0.0.subt-plugin",
+        "sha256": "c4eb341f76a1a9c6cffb5db18fa0843a82187cedd9af5ec46ada5b5b67abfe51",
+        "size": 1323
+      }
+    },
+    {
+      "id": "tt88vn.text-tools",
+      "version": "1.0.0",
+      "displayName": {
+        "vi": "Công cụ văn bản",
+        "en": "Text Tools"
+      },
+      "description": {
+        "vi": "Đổi kiểu tên (camelCase, snake_case, kebab-case…), Base64, URL, escape JSON và thống kê văn bản cho vùng chọn.",
+        "en": "Case conversion (camelCase, snake_case, kebab-case…), Base64, URL, JSON escaping and text statistics for the selection."
+      },
+      "author": "tt88vn",
+      "license": "MIT",
+      "engines": {
+        "subt": "^1.0.0"
+      },
+      "permissions": [],
+      "hasCode": true,
+      "contributes": {
+        "commands": 12
+      },
+      "homepage": "https://github.com/tt88vn/subt-plugins/tree/main/plugins/tt88vn.text-tools",
+      "tag": "tt88vn.text-tools-v1.0.0",
+      "download": {
+        "url": "https://github.com/tt88vn/subt-plugins/releases/download/tt88vn.text-tools-v1.0.0/tt88vn.text-tools-1.0.0.subt-plugin",
+        "sha256": "9d80acff73efcef8c29f3451d148e8a39b3cd02b3efb36ab28ea14c994afe062",
+        "size": 3544
+      }
+    }
+  ]
+}
