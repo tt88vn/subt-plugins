@@ -1,0 +1,24 @@
+{
+  "id": "tt88vn.dracula",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": "Dracula",
+  "description": {
+    "vi": "Bảng màu tối Dracula (bảng màu gốc của draculatheme.com, MIT).",
+    "en": "The Dracula dark color scheme (palette from draculatheme.com, MIT)."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "contributes": {
+    "themes": [
+      {
+        "id": "dracula",
+        "label": "Dracula",
+        "path": "themes/dracula.json",
+        "dark": true
+      }
+    ]
+  }
+}

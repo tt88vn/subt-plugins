@@ -1,0 +1,29 @@
+{
+  "id": "tt88vn.text-tools",
+  "version": "1.0.0",
+  "engines": { "subt": "^1.0.0" },
+  "displayName": { "vi": "Công cụ văn bản", "en": "Text Tools" },
+  "description": {
+    "vi": "Đổi kiểu tên (camelCase, snake_case, kebab-case…), Base64, URL, escape JSON và thống kê văn bản cho vùng chọn.",
+    "en": "Case conversion (camelCase, snake_case, kebab-case…), Base64, URL, JSON escaping and text statistics for the selection."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "main": "main.js",
+  "contributes": {
+    "commands": [
+      { "id": "textTools.camelCase", "title": "camelCase", "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.pascalCase", "title": "PascalCase", "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.snakeCase", "title": "snake_case", "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.constantCase", "title": "CONSTANT_CASE", "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.kebabCase", "title": "kebab-case", "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.base64Encode", "title": { "vi": "Mã hóa Base64", "en": "Base64 Encode" }, "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.base64Decode", "title": { "vi": "Giải mã Base64", "en": "Base64 Decode" }, "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.urlEncode", "title": { "vi": "Mã hóa URL", "en": "URL Encode" }, "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.urlDecode", "title": { "vi": "Giải mã URL", "en": "URL Decode" }, "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.jsonEscape", "title": { "vi": "Escape thành chuỗi JSON", "en": "Escape as JSON String" }, "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.jsonUnescape", "title": { "vi": "Bỏ escape chuỗi JSON", "en": "Unescape JSON String" }, "category": { "vi": "Văn bản", "en": "Text" } },
+      { "id": "textTools.stats", "title": { "vi": "Thống kê (dòng, từ, ký tự)", "en": "Statistics (lines, words, characters)" }, "category": { "vi": "Văn bản", "en": "Text" } }
+    ]
+  }
+}
