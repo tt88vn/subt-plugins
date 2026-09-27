@@ -1,0 +1,135 @@
+{
+  "id": "tt88vn.linter",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": {
+    "vi": "Linter (SublimeLinter rút gọn)",
+    "en": "Linter (SublimeLinter lite)"
+  },
+  "description": {
+    "vi": "Kiểm tra khi lưu: lỗi cú pháp JSON/JavaScript, ngoặc không khớp, khoảng trắng thừa, thụt lề lẫn tab/dấu cách, dấu xung đột merge… Danh sách lỗi và F8 để nhảy tới lỗi tiếp theo.",
+    "en": "Checks on save: JSON/JavaScript syntax errors, unmatched brackets, trailing whitespace, mixed indentation, merge conflict markers… Problem list, F8 to jump to the next one."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "main": "main.js",
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "linter.lint",
+        "title": {
+          "vi": "Kiểm tra tệp và hiện danh sách lỗi",
+          "en": "Lint File and Show Problems"
+        },
+        "category": "Linter"
+      },
+      {
+        "id": "linter.next",
+        "title": {
+          "vi": "Tới lỗi tiếp theo",
+          "en": "Go to Next Problem"
+        },
+        "category": "Linter"
+      },
+      {
+        "id": "linter.previous",
+        "title": {
+          "vi": "Tới lỗi trước",
+          "en": "Go to Previous Problem"
+        },
+        "category": "Linter"
+      },
+      {
+        "id": "linter.fixWhitespace",
+        "title": {
+          "vi": "Xóa khoảng trắng thừa, thêm dòng cuối",
+          "en": "Fix Trailing Whitespace and Final Newline"
+        },
+        "category": "Linter"
+      },
+      {
+        "id": "linter.toggle",
+        "title": {
+          "vi": "Bật/tắt kiểm tra khi lưu",
+          "en": "Toggle Lint on Save"
+        },
+        "category": "Linter"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "linter.lint",
+        "key": "ctrl+alt+l"
+      },
+      {
+        "command": "linter.next",
+        "key": "f8"
+      },
+      {
+        "command": "linter.previous",
+        "key": "shift+f8"
+      }
+    ],
+    "settings": [
+      {
+        "key": "lintOnSave",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "Kiểm tra mỗi khi lưu (kết quả hiện trên thanh trạng thái)",
+          "en": "Lint on every save (summary in the status bar)"
+        }
+      },
+      {
+        "key": "lintOnOpen",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Kiểm tra khi mở tệp",
+          "en": "Lint when a file is opened"
+        }
+      },
+      {
+        "key": "maxLineLength",
+        "type": "number",
+        "default": 0,
+        "description": {
+          "vi": "Cảnh báo dòng dài hơn số ký tự này (0 = tắt)",
+          "en": "Warn about lines longer than this (0 = off)"
+        }
+      },
+      {
+        "key": "showTodos",
+        "type": "boolean",
+        "default": false,
+        "description": {
+          "vi": "Liệt kê TODO / FIXME",
+          "en": "List TODO / FIXME comments"
+        }
+      },
+      {
+        "key": "javascriptSyntax",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "Kiểm tra cú pháp tệp .js (chỉ biên dịch, không chạy)",
+          "en": "Check .js syntax (compiled only, never run)"
+        }
+      },
+      {
+        "key": "disabledRules",
+        "type": "array",
+        "default": [],
+        "description": {
+          "vi": "Tắt quy tắc, vd [\"trailing-whitespace\", \"final-newline\"]",
+          "en": "Rules to turn off, e.g. [\"trailing-whitespace\", \"final-newline\"]"
+        }
+      }
+    ]
+  }
+}

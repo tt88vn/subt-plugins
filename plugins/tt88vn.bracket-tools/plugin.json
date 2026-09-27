@@ -1,0 +1,113 @@
+{
+  "id": "tt88vn.bracket-tools",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": {
+    "vi": "Công cụ ngoặc (BracketHighlighter)",
+    "en": "Bracket Tools (BracketHighlighter)"
+  },
+  "description": {
+    "vi": "Nhảy tới ngoặc tương ứng, mở rộng vùng chọn theo ngoặc/nháy, xóa/đổi/bọc ngoặc, tìm ngoặc không khớp. Bỏ qua ngoặc trong chuỗi và comment.",
+    "en": "Jump to the matching bracket, expand the selection by brackets/quotes, remove/change/wrap pairs, find unmatched brackets. Ignores strings and comments."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "main": "main.js",
+  "contributes": {
+    "commands": [
+      {
+        "id": "brackets.jump",
+        "title": {
+          "vi": "Nhảy tới ngoặc tương ứng",
+          "en": "Jump to Matching Bracket"
+        },
+        "category": {
+          "vi": "Ngoặc",
+          "en": "Brackets"
+        }
+      },
+      {
+        "id": "brackets.expand",
+        "title": {
+          "vi": "Chọn trong ngoặc / nháy (bấm tiếp để mở rộng)",
+          "en": "Select Inside Brackets / Quotes (repeat to expand)"
+        },
+        "category": {
+          "vi": "Ngoặc",
+          "en": "Brackets"
+        }
+      },
+      {
+        "id": "brackets.remove",
+        "title": {
+          "vi": "Xóa cặp ngoặc / nháy bao quanh",
+          "en": "Remove Enclosing Brackets / Quotes"
+        },
+        "category": {
+          "vi": "Ngoặc",
+          "en": "Brackets"
+        }
+      },
+      {
+        "id": "brackets.change",
+        "title": {
+          "vi": "Đổi loại ngoặc / nháy bao quanh…",
+          "en": "Change Enclosing Brackets / Quotes…"
+        },
+        "category": {
+          "vi": "Ngoặc",
+          "en": "Brackets"
+        }
+      },
+      {
+        "id": "brackets.wrap",
+        "title": {
+          "vi": "Bọc vùng chọn bằng ngoặc / nháy…",
+          "en": "Wrap Selection with Brackets / Quotes…"
+        },
+        "category": {
+          "vi": "Ngoặc",
+          "en": "Brackets"
+        }
+      },
+      {
+        "id": "brackets.showMatch",
+        "title": {
+          "vi": "Cho biết ngoặc tương ứng ở dòng nào",
+          "en": "Show Matching Bracket Line"
+        },
+        "category": {
+          "vi": "Ngoặc",
+          "en": "Brackets"
+        }
+      },
+      {
+        "id": "brackets.unmatched",
+        "title": {
+          "vi": "Tìm ngoặc không khớp",
+          "en": "Find Unmatched Brackets"
+        },
+        "category": {
+          "vi": "Ngoặc",
+          "en": "Brackets"
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "brackets.jump",
+        "key": "ctrl+m"
+      },
+      {
+        "command": "brackets.expand",
+        "key": "ctrl+alt+["
+      },
+      {
+        "command": "brackets.showMatch",
+        "key": "ctrl+alt+]"
+      }
+    ]
+  }
+}

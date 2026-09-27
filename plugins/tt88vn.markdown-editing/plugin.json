@@ -1,0 +1,310 @@
+{
+  "id": "tt88vn.markdown-editing",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": {
+    "vi": "MarkdownEditing",
+    "en": "MarkdownEditing"
+  },
+  "description": {
+    "vi": "Soạn Markdown nhanh: bật/tắt in đậm/nghiêng/code, tiêu đề, danh sách & việc cần làm, căn bảng, mục lục tự cập nhật, tới tiêu đề, snippet.",
+    "en": "Faster Markdown: toggle bold/italic/code, headings, lists & tasks, table formatting, auto-updating table of contents, go to heading, snippets."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "main": "main.js",
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "md.bold",
+        "title": {
+          "vi": "In đậm (bật/tắt)",
+          "en": "Toggle Bold"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.italic",
+        "title": {
+          "vi": "In nghiêng (bật/tắt)",
+          "en": "Toggle Italic"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.strikethrough",
+        "title": {
+          "vi": "Gạch ngang (bật/tắt)",
+          "en": "Toggle Strikethrough"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.inlineCode",
+        "title": {
+          "vi": "Code trong dòng (bật/tắt)",
+          "en": "Toggle Inline Code"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.codeBlock",
+        "title": {
+          "vi": "Khối code",
+          "en": "Code Block"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.link",
+        "title": {
+          "vi": "Chèn liên kết",
+          "en": "Insert Link"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.image",
+        "title": {
+          "vi": "Chèn ảnh",
+          "en": "Insert Image"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.headingIncrease",
+        "title": {
+          "vi": "Tăng cấp tiêu đề (thêm #)",
+          "en": "Increase Heading Level"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.headingDecrease",
+        "title": {
+          "vi": "Giảm cấp tiêu đề (bớt #)",
+          "en": "Decrease Heading Level"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.setHeading",
+        "title": {
+          "vi": "Đặt cấp tiêu đề…",
+          "en": "Set Heading Level…"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.bulletList",
+        "title": {
+          "vi": "Danh sách gạch đầu dòng (bật/tắt)",
+          "en": "Toggle Bulleted List"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.orderedList",
+        "title": {
+          "vi": "Danh sách đánh số (bật/tắt)",
+          "en": "Toggle Numbered List"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.taskList",
+        "title": {
+          "vi": "Danh sách việc cần làm (bật/tắt)",
+          "en": "Toggle Task List"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.toggleTask",
+        "title": {
+          "vi": "Đánh dấu xong / chưa xong",
+          "en": "Toggle Task Done"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.blockquote",
+        "title": {
+          "vi": "Trích dẫn (bật/tắt)",
+          "en": "Toggle Blockquote"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.newListItem",
+        "title": {
+          "vi": "Mục danh sách mới",
+          "en": "New List Item"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.renumber",
+        "title": {
+          "vi": "Đánh lại số danh sách",
+          "en": "Renumber Lists"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.formatTable",
+        "title": {
+          "vi": "Căn bảng tại con trỏ",
+          "en": "Format Table"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.formatAllTables",
+        "title": {
+          "vi": "Căn mọi bảng",
+          "en": "Format All Tables"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.insertTable",
+        "title": {
+          "vi": "Chèn bảng…",
+          "en": "Insert Table…"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.toc",
+        "title": {
+          "vi": "Chèn / cập nhật mục lục",
+          "en": "Insert / Update Table of Contents"
+        },
+        "category": "Markdown"
+      },
+      {
+        "id": "md.gotoHeading",
+        "title": {
+          "vi": "Tới tiêu đề…",
+          "en": "Go to Heading…"
+        },
+        "category": "Markdown"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "md.bold",
+        "key": "ctrl+alt+b",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.italic",
+        "key": "ctrl+alt+i",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.link",
+        "key": "ctrl+alt+k",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.newListItem",
+        "key": "alt+enter",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.toggleTask",
+        "key": "ctrl+alt+x",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.headingIncrease",
+        "key": "ctrl+alt+=",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.headingDecrease",
+        "key": "ctrl+alt+-",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.formatTable",
+        "key": "ctrl+alt+f",
+        "when": "language == markdown"
+      },
+      {
+        "command": "md.gotoHeading",
+        "key": "ctrl+alt+r",
+        "when": "language == markdown"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "snippets/markdown.json"
+      }
+    ],
+    "settings": [
+      {
+        "key": "boldMarker",
+        "type": "string",
+        "default": "**",
+        "description": {
+          "vi": "Ký hiệu in đậm: ** hoặc __",
+          "en": "Bold marker: ** or __"
+        }
+      },
+      {
+        "key": "italicMarker",
+        "type": "string",
+        "default": "*",
+        "description": {
+          "vi": "Ký hiệu in nghiêng: * hoặc _",
+          "en": "Italic marker: * or _"
+        }
+      },
+      {
+        "key": "bullet",
+        "type": "string",
+        "default": "-",
+        "description": {
+          "vi": "Ký hiệu gạch đầu dòng: -, * hoặc +",
+          "en": "List bullet: -, * or +"
+        }
+      },
+      {
+        "key": "tocMinLevel",
+        "type": "number",
+        "default": 1,
+        "description": {
+          "vi": "Cấp tiêu đề nhỏ nhất đưa vào mục lục",
+          "en": "Smallest heading level in the table of contents"
+        }
+      },
+      {
+        "key": "tocMaxLevel",
+        "type": "number",
+        "default": 6,
+        "description": {
+          "vi": "Cấp tiêu đề lớn nhất đưa vào mục lục",
+          "en": "Largest heading level in the table of contents"
+        }
+      },
+      {
+        "key": "autoUpdateToc",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "Tự cập nhật mục lục (giữa <!-- TOC --> và <!-- /TOC -->) khi lưu",
+          "en": "Update the table of contents (between <!-- TOC --> and <!-- /TOC -->) on save"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "Code block": {
+    "prefix": "code",
+    "body": [
+      "```${1:lang}",
+      "$0",
+      "```"
+    ],
+    "description": "Fenced code block"
+  },
+  "Link": {
+    "prefix": "link",
+    "body": "[${1:text}](${2:https://})$0"
+  },
+  "Image": {
+    "prefix": "img",
+    "body": "![${1:alt}](${2:path})$0"
+  },
+  "Table": {
+    "prefix": "table",
+    "body": [
+      "| ${1:A} | ${2:B} |",
+      "| --- | --- |",
+      "| ${3}  | ${4}  |",
+      "$0"
+    ]
+  },
+  "Task": {
+    "prefix": "task",
+    "body": "- [ ] ${1}"
+  },
+  "Details": {
+    "prefix": "details",
+    "body": [
+      "<details>",
+      "<summary>${1:Summary}</summary>",
+      "",
+      "$0",
+      "",
+      "</details>"
+    ]
+  },
+  "Footnote": {
+    "prefix": "fn",
+    "body": "[^${1:1}]$0"
+  },
+  "Horizontal rule": {
+    "prefix": "hr",
+    "body": [
+      "",
+      "---",
+      "",
+      "$0"
+    ]
+  },
+  "Front matter": {
+    "prefix": "front",
+    "body": [
+      "---",
+      "title: ${1}",
+      "date: ${2}",
+      "---",
+      "",
+      "$0"
+    ]
+  },
+  "Note (GitHub alert)": {
+    "prefix": "note",
+    "body": [
+      "> [!${1:NOTE}]",
+      "> $0"
+    ]
+  }
+}

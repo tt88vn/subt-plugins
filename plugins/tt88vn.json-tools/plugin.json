@@ -1,0 +1,152 @@
+{
+  "id": "tt88vn.json-tools",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": {
+    "vi": "Pretty JSON mở rộng",
+    "en": "Pretty JSON Extras"
+  },
+  "description": {
+    "vi": "Bổ sung cho Pretty JSON có sẵn: JSON ↔ YAML/XML/CSV/JSON Lines, truy vấn JSONPath, xem đường dẫn tại con trỏ, làm sạch JSONC, định dạng gọn mảng ngắn.",
+    "en": "Extras for the built-in Pretty JSON: JSON → YAML/XML/CSV/JSON Lines and back, JSONPath queries, path at caret, JSONC cleanup, compact formatting."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "main": "main.js",
+  "contributes": {
+    "commands": [
+      {
+        "id": "jsonTools.toYaml",
+        "title": {
+          "vi": "Chuyển sang YAML",
+          "en": "Convert to YAML"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.toXml",
+        "title": {
+          "vi": "Chuyển sang XML",
+          "en": "Convert to XML"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.toCsv",
+        "title": {
+          "vi": "Chuyển mảng đối tượng sang CSV",
+          "en": "Convert Array of Objects to CSV"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.fromCsv",
+        "title": {
+          "vi": "Chuyển CSV sang JSON",
+          "en": "Convert CSV to JSON"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.toJsonLines",
+        "title": {
+          "vi": "Chuyển mảng sang JSON Lines",
+          "en": "Convert Array to JSON Lines"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.fromJsonLines",
+        "title": {
+          "vi": "Chuyển JSON Lines sang mảng",
+          "en": "Convert JSON Lines to Array"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.query",
+        "title": {
+          "vi": "Truy vấn JSONPath…",
+          "en": "Query with JSONPath…"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.pathAtCursor",
+        "title": {
+          "vi": "Đường dẫn tại con trỏ",
+          "en": "Show Path at Caret"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.cleanJsonc",
+        "title": {
+          "vi": "JSONC/JSON5 → JSON (bỏ comment, dấu phẩy thừa)",
+          "en": "JSONC/JSON5 → JSON (strip comments, trailing commas)"
+        },
+        "category": "JSON"
+      },
+      {
+        "id": "jsonTools.formatCompact",
+        "title": {
+          "vi": "Định dạng (mảng ngắn trên một dòng)",
+          "en": "Format (short arrays on one line)"
+        },
+        "category": "JSON"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jsonTools.query",
+        "key": "ctrl+alt+q",
+        "when": "language == json"
+      },
+      {
+        "command": "jsonTools.pathAtCursor",
+        "key": "ctrl+alt+p",
+        "when": "language == json"
+      }
+    ],
+    "settings": [
+      {
+        "key": "indent",
+        "type": "number",
+        "default": 2,
+        "description": {
+          "vi": "Số dấu cách thụt lề",
+          "en": "Spaces per indent level"
+        }
+      },
+      {
+        "key": "output",
+        "type": "string",
+        "default": "newTab",
+        "description": {
+          "vi": "Kết quả chuyển đổi: \"newTab\" (tab mới) hoặc \"replace\" (thay tại chỗ)",
+          "en": "Conversion result: \"newTab\" or \"replace\" (in place)"
+        }
+      },
+      {
+        "key": "csvTypes",
+        "type": "boolean",
+        "default": true,
+        "description": {
+          "vi": "CSV → JSON: đổi số, true/false, null thành kiểu tương ứng",
+          "en": "CSV → JSON: turn numbers, true/false and null into typed values"
+        }
+      },
+      {
+        "key": "maxLineWidth",
+        "type": "number",
+        "default": 80,
+        "description": {
+          "vi": "Độ dài tối đa của mảng viết trên một dòng",
+          "en": "Maximum width of a one-line array"
+        }
+      }
+    ]
+  }
+}

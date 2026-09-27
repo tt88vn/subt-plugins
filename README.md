@@ -14,6 +14,13 @@ kiểm tra **SHA-256** với `index.json` rồi mới cài, và hiện danh sác
 |---|---|
 | [`tt88vn.text-tools`](plugins/tt88vn.text-tools) | camelCase / snake_case / kebab-case…, Base64, URL, JSON escape, thống kê văn bản |
 | [`tt88vn.dracula`](plugins/tt88vn.dracula) | Bảng màu Dracula |
+| [`tt88vn.emmet`](plugins/tt88vn.emmet) | Emmet: `ul>li*3`, `m10-20`, `!`, bọc bằng viết tắt, chọn/xóa/đổi tên thẻ |
+| [`tt88vn.markdown-editing`](plugins/tt88vn.markdown-editing) | MarkdownEditing: in đậm/nghiêng, tiêu đề, danh sách & việc cần làm, căn bảng, mục lục |
+| [`tt88vn.prettier`](plugins/tt88vn.prettier) | Prettier 3 (JsPrettier) chạy ngay trong SubT: JS/TS, CSS, HTML, JSON, Markdown, YAML, GraphQL |
+| [`tt88vn.json-tools`](plugins/tt88vn.json-tools) | Pretty JSON mở rộng: JSON ↔ YAML/XML/CSV/JSON Lines, truy vấn JSONPath, JSONC → JSON |
+| [`tt88vn.linter`](plugins/tt88vn.linter) | Linter (SublimeLinter rút gọn): lỗi JSON/JS, ngoặc không khớp, khoảng trắng, F8 tới lỗi tiếp theo |
+| [`tt88vn.bracket-tools`](plugins/tt88vn.bracket-tools) | Công cụ ngoặc (BracketHighlighter): nhảy/chọn/xóa/đổi ngoặc, tìm ngoặc không khớp |
+| [`tt88vn.change-tracker`](plugins/tt88vn.change-tracker) | Change Tracker (GitGutter rút gọn): diff với lần lưu, nhảy/hoàn tác từng thay đổi |
 
 ## Cách hoạt động / How it works
 

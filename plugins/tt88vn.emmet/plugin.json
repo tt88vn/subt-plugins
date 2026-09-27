@@ -1,0 +1,99 @@
+{
+  "id": "tt88vn.emmet",
+  "version": "1.0.0",
+  "engines": {
+    "subt": "^1.0.0"
+  },
+  "displayName": {
+    "vi": "Emmet",
+    "en": "Emmet"
+  },
+  "description": {
+    "vi": "Viết tắt Emmet cho HTML/CSS/JSX (ul>li*3, m10-20, !), bọc vùng chọn bằng viết tắt, chọn/xóa/đổi tên thẻ.",
+    "en": "Emmet abbreviations for HTML/CSS/JSX (ul>li*3, m10-20, !), wrap with abbreviation, balance/remove/rename tags."
+  },
+  "author": "tt88vn",
+  "license": "MIT",
+  "main": "main.js",
+  "contributes": {
+    "commands": [
+      {
+        "id": "emmet.expand",
+        "title": {
+          "vi": "Bung viết tắt",
+          "en": "Expand Abbreviation"
+        },
+        "category": "Emmet"
+      },
+      {
+        "id": "emmet.wrap",
+        "title": {
+          "vi": "Bọc bằng viết tắt",
+          "en": "Wrap with Abbreviation"
+        },
+        "category": "Emmet"
+      },
+      {
+        "id": "emmet.balanceOutward",
+        "title": {
+          "vi": "Chọn thẻ bao quanh (mở rộng dần)",
+          "en": "Balance Outward"
+        },
+        "category": "Emmet"
+      },
+      {
+        "id": "emmet.matchingPair",
+        "title": {
+          "vi": "Tới thẻ đóng/mở tương ứng",
+          "en": "Go to Matching Pair"
+        },
+        "category": "Emmet"
+      },
+      {
+        "id": "emmet.removeTag",
+        "title": {
+          "vi": "Xóa thẻ (giữ nội dung)",
+          "en": "Remove Tag"
+        },
+        "category": "Emmet"
+      },
+      {
+        "id": "emmet.updateTag",
+        "title": {
+          "vi": "Đổi tên thẻ",
+          "en": "Update Tag"
+        },
+        "category": "Emmet"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "emmet.expand",
+        "key": "ctrl+e"
+      },
+      {
+        "command": "emmet.wrap",
+        "key": "ctrl+shift+e"
+      },
+      {
+        "command": "emmet.balanceOutward",
+        "key": "ctrl+shift+a"
+      },
+      {
+        "command": "emmet.matchingPair",
+        "key": "ctrl+alt+t"
+      }
+    ],
+    "settings": [
+      {
+        "key": "selfClosingStyle",
+        "type": "string",
+        "default": "html",
+        "description": {
+          "vi": "Thẻ rỗng: \"html\" → <br>, \"xhtml\" → <br /> (JSX/XML luôn dùng <br />)",
+          "en": "Void tags: \"html\" → <br>, \"xhtml\" → <br /> (JSX/XML always use <br />)"
+        }
+      }
+    ]
+  }
+}
